@@ -37,69 +37,50 @@ def save_csv(qualifying_loans):
 
     header = ["Lender","Max Loan Amount","Max LTV","Max DTI","Min Credit Score","Interest Rate"]
 
-    for dataloans in qualifying_loans:
-
-        questionary.form(
+    questionary.form(
 
         firstquestion = questionary.confirm ("Would you like to save your qualifying loans?", default=True),
         secondquestion = questionary.select ("Select option: ", choices=["Yes", "No"] )
         
         ).ask()
 
-        if choices in secondquestion == ["Yes"]:
+    for dataloans in currentcsvfile:
+
+         if choices in secondquestion == ["Yes"]:
 
             return data 
 
         else: 
 
-            print ()
+            print ("Thank you for banking with us. Goodbye.")
 
-            
-            
-            
-            
-            
-# with open ('path/to/daily_rate_sheet.csv', 'w') as f:
-#     writer = csv.writer(f)
-#     writer.writerow(row)
+    with open ('path/to/daily_rate_sheet.csv', 'w') as f:
+    writer = csv.writer(f)
+    writer.writerow(row)
 
-
-
-        else: print "K bye. "
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    saving_loan = questionary.form(
-
-        firstquestion = questionary.confirm ("Would you like to save your qualifying loans?", default=True),
-        secondquestion = questionary.select ("Select option: ", choices=["Yes", "No"] )
-        
-        ).ask()
 
     
 
-    csv_question = input ("Would you like to save your loan qualifier application to a CSV file?")
+            
+            
+            
+            
+            
 
-    if csv_promt  
 
-    with open ('path/to/daily_rate_sheet.csv', 'w') as f:
 
-        writer = csv.writer(f)
 
-        writer.writerow(row)
 
+
+
+
+
+
+
+
+
+
+    
 
     
     
