@@ -114,8 +114,6 @@ def save_qualifying_loans(qualifying_loans):
     Args:
         qualifying_loans (list of lists): The qualifying bank loans.
     """
-    # @TODO: Complete the usability dialog for savings the CSV Files.
-    # YOUR CODE HERE!
 
     saving_loan = questionary.form(
 
@@ -124,8 +122,6 @@ def save_qualifying_loans(qualifying_loans):
         
         ).ask()
     
-
-
 
 def run():
     """The main function for running the script."""
