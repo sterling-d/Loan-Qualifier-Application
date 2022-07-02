@@ -8,22 +8,14 @@ Taking into account our current business climate in regards to the advancement o
 
 This project leverages python 3.7 with the following packages:
 
-* [fire](https://github.com/google/python-fire) - For the command line interface, help page, and entrypoint.
+* [fire](https://github.com/google/python-fire) - For the command line interface
 
 * [questionary](https://github.com/tmbo/questionary) - For interactive user prompts and dialogs
 
-* [sys]  
+* [sys] (https://github.com/golang/sys) - For exiting the interpreter once user is finished using program 
 
-For lines 40-45 #we used sys.exit 
+* [Path] (https://github.com/jaraco/path) - For retrieving files within our user's CSV folder
 
-* [Path] 
-
-
-
-
-
-
-Describe the technologies required to use your project such as programming languages, libraries, frameworks, and operating systems. Be sure to include the specific versions of any critical dependencies that you have used in the stable version of your project.
 
 ---
 
