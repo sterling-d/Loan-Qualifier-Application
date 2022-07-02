@@ -28,6 +28,32 @@ from qualifier.filters.loan_to_value import filter_loan_to_value
 # In app.py, write a function named save_csv
 # that uses the csv library to save the qualifying data as a file.
 
+def save_csv(qualifying_loans):
+
+    data = []
+
+    header = ["Lender","Max Loan Amount","Max LTV","Max DTI","Min Credit Score","Interest Rate"]
+
+    questionary.form(
+
+        firstquestion = questionary.confirm ("Would you like to save your qualifying loans?", default=True),
+        secondquestion = questionary.select ("Select option: ", choices=["Yes", "No"] )
+        
+        ).ask()
+
+    for dataloans in currentcsvfile:
+
+         if choices in secondquestion == ["Yes"]:
+
+            return data 
+
+        else: 
+
+            print ("Thank you for banking with us. Goodbye.")
+
+    with open ('path/to/daily_rate_sheet.csv', 'w') as f:
+    writer = csv.writer(f)
+    writer.writerow(row)
 
 
 def load_bank_data():
@@ -121,6 +147,10 @@ def save_qualifying_loans(qualifying_loans):
         secondquestion = questionary.select ("Select option: ", choices=["Yes", "No"] )
         
         ).ask()
+    
+
+    
+    
     
 
 def run():
