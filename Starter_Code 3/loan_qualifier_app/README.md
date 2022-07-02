@@ -12,9 +12,9 @@ This project leverages python 3.7 with the following packages:
 
 * [questionary](https://github.com/tmbo/questionary) - For interactive user prompts and dialogs
 
-* [sys] (https://github.com/golang/sys) - For exiting the interpreter once user is finished using program 
+* [sys](https://github.com/golang/sys) - For exiting the interpreter once user is finished using program 
 
-* [Path] (https://github.com/jaraco/path) - For retrieving files within our user's CSV folder
+* [Path](https://github.com/jaraco/path) - For retrieving files within our user's CSV folder
 
 
 ---
