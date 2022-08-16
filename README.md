@@ -51,8 +51,6 @@ Upon launching the loan qualifier application you will be greeted with the follo
 
 
 
-This section should include screenshots, code blocks, or animations explaining how to use your project.
-
 ![Test](Images/mycode.jpg)
 
 
