@@ -11,9 +11,8 @@ import fire
 import questionary
 from pathlib import Path
 
-# from qualifier.utils.fileio import load_csv
-# from qualifier.utils.fileio import save_csv
-
+from qualifier.utils.fileio import load_csv
+from qualifier.utils.fileio import save_csv
 from qualifier.utils.calculators import (
     calculate_monthly_debt_ratio,
     calculate_loan_to_value_ratio,
@@ -23,37 +22,33 @@ from qualifier.filters.max_loan_size import filter_max_loan_size
 from qualifier.filters.credit_score import filter_credit_score
 from qualifier.filters.debt_to_income import filter_debt_to_income
 from qualifier.filters.loan_to_value import filter_loan_to_value
-from qualifier.utils.fileio import load_csv
+
 
 # In app.py, write a function named save_csv
 # that uses the csv library to save the qualifying data as a file.
 
-def save_csv(qualifying_loans):
+#def save_csv(qualifying_loans):
 
-    data = []
+    #data = []
 
-    header = ["Lender","Max Loan Amount","Max LTV","Max DTI","Min Credit Score","Interest Rate"]
+    #header = ["Lender","Max Loan Amount","Max LTV","Max DTI","Min Credit Score","Interest Rate"]
 
-    questionary.form(
+    #questionary.form(
 
-        firstquestion = questionary.confirm ("Would you like to save your qualifying loans?", default=True),
-        secondquestion = questionary.select ("Select option: ", choices=["Yes", "No"] )
+        #firstquestion = questionary.confirm ("Would you like to save your qualifying loans?", default=True),
+        #secondquestion = questionary.select ("Select option: ", choices=["Yes", "No"] )
         
-        ).ask()
+        #).ask()
 
-    for dataloans in currentcsvfile:
+    #for dataloans in currentcsvfile:
 
-        if choices in secondquestion == ["Yes"]:
+        #if choices in secondquestion == ["Yes"]:
 
-            return data 
+            #return data 
             
-        else: 
+        #else: 
             
-            print ("Thank you for banking with us. Goodbye.")
-
-    with open ('path/to/daily_rate_sheet.csv', 'w') as f:
-        writer = csv.writer(f)
-        writer.writerow(row)
+            #print ("Thank you for banking with us. Goodbye.")
 
 
 
@@ -141,15 +136,19 @@ def save_qualifying_loans(qualifying_loans):
     Args:
         qualifying_loans (list of lists): The qualifying bank loans.
     """
-    # @TODO: Complete the usability dialog for savings the CSV Files.
-    # YOUR CODE HERE!
+    # Complete the usability dialog for savings the CSV Files.
 
-    saving_loan = questionary.form(
+    if not qualifying_loans:
+        sys.exit ("Sorry! Cannot offer a loan.")
 
-        firstquestion = questionary.confirm ("Would you like to save your qualifying loans?", default=True),
-        secondquestion = questionary.select ("Select option: ", choices=["Yes", "No"] )
-        
-        ).ask()
+
+    saving_loan = questionary.confirm ("Would you like to save your qualifying loans?").ask()
+
+    if saving_loan:
+
+        file_path = questionary.text("Please give file path name.").ask()
+        save_csv(Path(file_path), qualifying_loans)
+
     
 
 

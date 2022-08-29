@@ -31,32 +31,17 @@ def load_csv(csvpath):
     return data
 
 
-def save_csv(qualifying_loans):
-
-    data = []
-
-    header = ["Lender","Max Loan Amount","Max LTV","Max DTI","Min Credit Score","Interest Rate"]
-
-    questionary.form(
-
-        firstquestion = questionary.confirm ("Would you like to save your qualifying loans?", default=True),
-        secondquestion = questionary.select ("Select option: ", choices=["Yes", "No"] )
+def save_csv(file_path, data, header=None):
+    
+    with open (file_path, 'w', newline="") as f:
+        writer = csv.writer(f, delimiter = ",")
         
-        ).ask()
-
-    for dataloans in currentcsvfile:
-
-        if choices in secondquestion == ["Yes"]:
-
-            return data 
+        if header: 
             
-        else: 
+            writer.writerows(header)
             
-            print ("Thank you for banking with us. Goodbye.")
+        writer.writerows(data)
 
-    with open ('path/to/daily_rate_sheet.csv', 'w') as f:
-        writer = csv.writer(f)
-        writer.writerow(row)
 
 
 
