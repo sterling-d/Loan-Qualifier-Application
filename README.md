@@ -1,4 +1,4 @@
-# Challenge 2: Creating a Loan Qualifer Application 
+#  Loan Qualifer Application 
 
 Taking into account our current business climate in regards to the advancement of financial technology, BizOps began to take note that many of our clients were searching for a better way to save qualifying loans. Because of that, our team developed a new strategy to translate and save qualying loan data from our users, to a new CSV file. Within this program, we take user loan data and save it to a new CSV file. 
 
