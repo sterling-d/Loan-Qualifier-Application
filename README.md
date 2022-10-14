@@ -18,13 +18,6 @@ For lines 40-45 #we used sys.exit
 
 * [Path] 
 
-
-
-
-
-
-Describe the technologies required to use your project such as programming languages, libraries, frameworks, and operating systems. Be sure to include the specific versions of any critical dependencies that you have used in the stable version of your project.
-
 ---
 
 ## Installation Guide
